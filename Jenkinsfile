@@ -21,7 +21,7 @@ pipeline {
       steps {
              sh './vendor/bin/phpunit'
       } 
-
+    
     stage('Prepare Dependencies') {
       steps {
              sh 'mv .env.sample .env'
@@ -32,5 +32,5 @@ pipeline {
       }
     }
   }
- 
+}
 }
