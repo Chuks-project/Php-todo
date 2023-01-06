@@ -81,3 +81,4 @@ stage ('Upload Artifact to Artifactory') {
             }
 
         }
+  }
