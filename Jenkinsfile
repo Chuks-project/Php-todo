@@ -56,6 +56,11 @@ stage('Code Analysis') {
 
       }
     }
+    stage ('Package Artifact') {
+    steps {
+            sh 'zip -qr php-todo.zip ${WORKSPACE}/*'
+     }
+    }
 stage ('Upload Artifact to Artifactory') {
           steps {
             script { 
