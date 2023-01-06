@@ -61,7 +61,6 @@ stage('Code Analysis') {
             sh 'zip -qr php-todo.zip ${WORKSPACE}/*'
      }
     }
-
 stage ('Upload Artifact to Artifactory') {
           steps {
             script { 
@@ -70,7 +69,7 @@ stage ('Upload Artifact to Artifactory') {
                     "files": [
                       {
                        "pattern": "php-todo.zip",
-                       "target": "PBL/php-todo",
+                       "target": "<name-of-artifact-repository>/php-todo",
                        "props": "type=zip;status=ready"
 
                        }
@@ -82,6 +81,3 @@ stage ('Upload Artifact to Artifactory') {
             }
 
         }
-
-}
-}
