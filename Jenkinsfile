@@ -61,7 +61,8 @@ stage('Code Analysis') {
             sh 'zip -qr php-todo.zip ${WORKSPACE}/*'
      }
     }
-stage ('Upload Artifact to Artifactory') {
+
+    stage ('Upload Artifact to Artifactory') {
           steps {
             script { 
                  def server = Artifactory.server 'artifactory-server'                 
