@@ -80,5 +80,5 @@ stage('Code Analysis') {
                  server.upload spec: uploadSpec
                }
             }
-
         }
+  }
