@@ -81,7 +81,7 @@ stage('Code Analysis') {
                     "files": [
                       {
                        "pattern": "php-todo.zip",
-                       "target": "PBL/php-todo",
+                       "target": "PBL/Php-todo",
                        "props": "type=zip;status=ready"
 
                        }
