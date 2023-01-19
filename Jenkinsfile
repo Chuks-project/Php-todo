@@ -29,12 +29,12 @@ pipeline {
   
     stage('Execute Unit Tests') {
       steps {
-             sh './vendor/bin/phpunit'
+             sh './vendor/bin/phpunit --log-junit reports/unitreport.xml'
       } 
    }
    stage('Code Analysis') {
      steps {
-        sh 'phploc app/ --log-csv build/logs/phploc.csv'
+            sh 'phploc app/ --log-csv build/logs/phploc.csv'
 
   }
 }
