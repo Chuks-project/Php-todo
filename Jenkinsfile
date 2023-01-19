@@ -83,7 +83,6 @@ pipeline {
                        "pattern": "php-todo.zip",
                        "target": "PBL/Php-todo",
                        "props": "type=zip;status=ready"
-
                        }
                     ]
                  }""" 
