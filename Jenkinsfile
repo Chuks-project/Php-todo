@@ -27,10 +27,12 @@ pipeline {
       }
     }
   
-    stage('Execute Unit Tests') {
+   stage('Execute Unit Tests') {
       steps {
-             sh './vendor/bin/phpunit --log-junit reports/unitreport.xml'
-      } 
+             sh './vendor/bin/phpunit'
+       
+    
+     } 
    }
    stage('Code Analysis') {
      steps {
