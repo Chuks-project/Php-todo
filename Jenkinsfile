@@ -21,9 +21,9 @@ pipeline {
       steps {
              sh 'mv .env.sample .env'
              sh 'composer install'
-             sh 'php artisan migrate'
-             sh 'php artisan db:seed'
-             sh 'php artisan key:generate'
+            //  sh 'php artisan migrate'
+            //  sh 'php artisan db:seed'
+            //  sh 'php artisan key:generate'
       }
     }
     
