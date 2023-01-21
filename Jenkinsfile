@@ -13,7 +13,7 @@ pipeline {
 
     stage('Checkout SCM') {
       steps {
-            git branch: 'main', url: 'https://github.com/Chuks-project/Php-todo.git'
+            git branch: 'main', url: 'https://github.com/darey-devops/php-todo.git'
       }
     }
 
@@ -26,8 +26,14 @@ pipeline {
              sh 'php artisan key:generate'
       }
     }
+    
+    stage('Execute Unit Tests') {
+      steps {
+             sh './vendor/bin/phpunit --log-junit reports/unitreport.xml'
+      } 
+   }
 
-   stage('Code Analysis') {
+  stage('Code Analysis') {
      steps {
             sh 'phploc app/ --log-csv build/logs/phploc.csv'
 
