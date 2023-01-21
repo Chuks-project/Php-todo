@@ -13,7 +13,7 @@ pipeline {
 
     stage('Checkout SCM') {
       steps {
-            git branch: 'main', url: 'https://github.com/darey-devops/php-todo.git'
+            git branch: 'main', url: 'https://github.com/Chuks-project/Php-todo.git'
       }
     }
 
@@ -24,8 +24,8 @@ pipeline {
             //  sh 'php artisan migrate'
             //  sh 'php artisan db:seed'
             //  sh 'php artisan key:generate'
-    //   }
-    // }
+      }
+    }
     
   //   stage('Execute Unit Tests') {
   //     steps {
@@ -98,6 +98,4 @@ stage ('Deploy to Dev Environment') {
     }
   }
     }
-  }
-  
   }
